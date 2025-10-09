@@ -1,0 +1,250 @@
+/* Estilos base (similar a los anteriores, con mejoras) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.header {
+  background-color: #ffdf2b;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Barra de búsqueda*/
+.search-bar {
+  width: 500px;
+  margin: 0 15px;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+/* Ajusta según el tamaño de tu logo TINY TALES*/
+.logo img {
+  height: 60px;  
+  width: auto;
+  display: block;
+}
+
+/*El menu de arriba (cabecera)*/
+.nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  padding: 10px;
+  
+}
+
+/* color del menu dentro de nav*/
+nav a{
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+}
+/* Para que me cambie el color al pasar por encima el raton*/ 
+nav a:hover{
+    background-color: #00d6a3;
+}
+
+/* Barra de la información de envío*/
+.banner {
+  background-color: #c0c2ef;
+  text-align: center;
+  padding: 2px;
+}
+
+/* Carrusel de fotos*/
+.carousel {
+
+  background-image: url('images/librosInicio.png'); /* ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 100px;
+  color: rgb(20, 166, 146);
+  display: flex;
+  justify-content: center; /* centra horizontalmente la card de dentro */
+  align-items: center;     /* centra verticalmente la card de dentro */
+  min-height: 400px;
+  position: relative; 
+}
+
+
+.carousel-section {
+  background-color: #ab1717;
+  padding: 30px 10px;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* para mover el carrusel de izq a derecha y al reves   */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    background-color: rgba(255, 255, 255, 0.914);  /* Para que sea traslucida */
+    padding: 20px;
+    width: 700px;
+    border-radius: 15px;
+    text-align: left;
+    min-width: 300px;
+}
+
+/* Imagen del carrusel */
+.carousel-image {
+    text-align: right;
+    height: 150px;
+    margin-top: 10px;
+
+}
+
+/* Botón principal: "Añadir a la cesta" */
+.carousel-card button {
+  background-color: #00b894; /* verde menta */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+/* Hover para botón principal */
+.carousel-card button:hover {
+  background-color: #ff8b1f;
+}
+
+/* Botón secundario: "Ver ficha" */
+.carousel-card button.secondary {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 20px;
+  margin: 10px 5px 0 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover para botón secundario */
+.carousel-card button.secondary:hover {
+  background-color: #ff8b1f;
+  color: #333;
+}
+
+
+
+
+.prev, .next {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Libros y secciones */
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.book-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #00d6a3;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.newsletter input {
+  padding: 8px;
+  margin-top: 10px;
+  width: 200px;
+  max-width: 80%;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .carousel-card {
+    width: 90%;
+  }
+
+  .prev, .next {
+    top: 50%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
