@@ -119,8 +119,8 @@ nav a:hover{
 
 /* Botón principal: "Añadir a la cesta" */
 .carousel-card button {
-  background-color: #00b894; /* verde menta */
-  color: white;
+  background-color: #c0c2ef; /* verde menta */
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 20px;
   margin: 10px 5px 0 5px;
@@ -154,9 +154,6 @@ nav a:hover{
   background-color: #ff8b1f;
   color: #333;
 }
-
-
-
 
 .prev, .next {
   background: #333;
