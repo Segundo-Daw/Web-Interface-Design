@@ -1,0 +1,47 @@
+.header{
+    text-align: center;
+    background-color: rgb(19, 124, 89);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 80px;
+}
+.general{
+    border-style: double;
+    border-color: black;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.encabezado{
+    text-align: center;
+    background-color: rgb(4, 31, 22);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+
+.sections {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+}
+
+.section1{
+    text-align: center;
+    background-color: rgb(146, 129, 221);
+    color: rgb(255, 255, 255);
+    padding: 160px;
+    border-radius: 10px;
+}
+
+.section2{
+    text-align: center;
+    background-color: rgb(65, 43, 160);
+    color: rgb(255, 255, 255);
+    padding: 160px;
+    border-radius: 10px;
+}

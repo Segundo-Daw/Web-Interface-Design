@@ -18,13 +18,55 @@ body {
   justify-content: space-between;
 }
 
-/*Barra de búsqueda*/
+/*Barra de búsqueda
 .search-bar {
   width: 500px;
   margin: 0 15px;
   padding: 8px;
   border-radius: 15px;
+}*/
+
+.search-bar {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
 }
+
+.search-bar input {
+  width: 60%;
+  padding: 10px 40px 10px 15px; /* deja espacio a la derecha para el botón */
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  background-color: #c0c2ef; /* morado */
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar button:hover {
+  background-color: #9575cd; /* tono más oscuro al pasar el mouse */
+}
+
+
+
+
+
 
 /* Ajusta según el tamaño de tu logo TINY TALES*/
 .logo img {
@@ -210,13 +252,20 @@ nav a:hover{
 
 /* Footer */
 .footer {
-  background: #333;
-  color: white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
   font-size: 14px;
+}
+
+/*Logo del Footer */ 
+.logoFooter img {
+  height: 90px;  
+  width: auto;
+  display: block;
 }
 
 /* Responsive */
