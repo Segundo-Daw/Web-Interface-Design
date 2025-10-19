@@ -1,0 +1,12 @@
+div {
+    margin: 5px;
+}
+
+#cajaGeneral {
+    width: 660px;
+    margin: 5px;
+}
+
+#cajaGeneral div {
+    background-color: rgb(151, 151, 151);
+}
