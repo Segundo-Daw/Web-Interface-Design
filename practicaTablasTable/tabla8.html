@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla 8</title>
+    <style>
+        
+
+        td, th {
+            width: 120px;
+            height: 90px;
+            border: solid 3px #ffffff;
+        }
+
+        td {
+            background-color: grey;
+        }
+
+        th {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Define los anchos de las 6 columnas -->
+        <colgroup>
+            <col style="width: 90px;">
+            <col style="width: 90px;">
+            <col style="width: 90px;">
+            <col style="width: 90px;">
+            <col style="width: 90px;">
+            <col style="width: 90px;">
+        </colgroup>
+
+        <!-- Fila 1 a 3: una celda que ocupa todas las columnas y 3 filas -->
+        <tr>
+            <td colspan="6" rowspan="3"></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+
+        <!-- Fila 4 a 9: combinación de columnas múltiples -->
+        <tr>
+            <td colspan="2" rowspan="6"></td> <!-- Ocupa 2 columnas, 6 filas -->
+            <td colspan="3" rowspan="6"></td> <!-- Ocupa 3 columnas, 6 filas -->
+            <th rowspan="7"></th>              <!-- Ocupa 1 columna, 7 filas -->
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+        <!-- Fila final (10): celda que ocupa 5 columnas -->
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+    </table>
+</body>
+</html>
