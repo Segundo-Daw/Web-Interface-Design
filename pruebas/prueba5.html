@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 5</title>
+    <style>
+         :root{
+            --text-color: #333;
+        }
+        .panel{
+            display: inline-block;
+            width: 320px;
+            padding: 1em;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Verdana, sans-serif;
+            box-sizing: border-box;
+
+        }
+        .invertido{
+            border-width: 0px;
+            background-color: #111;
+            --text-color:#eee;
+
+        }
+        .panel > h2,
+        .panel > p{
+            margin: 0px;
+            color: var(--text-color);
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Ejercicio 5</h2>
+    <p>Empleando variables</p>
+    <div class="panel">
+        <h2>Panel normal</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quidem aperiam facilis, odio accusamus dignissimos nam tempora! Neque dolores a quas atque dignissimos, expedita ut temporibus tempore iure laborum fugit!</p>
+    </div>
+    
+    <div class="panel invertido">
+        <h2>Panel normal</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quidem aperiam facilis, odio accusamus dignissimos nam tempora! Neque dolores a quas atque dignissimos, expedita ut temporibus tempore iure laborum fugit!</p>
+    </div>
+</body>
+</html>

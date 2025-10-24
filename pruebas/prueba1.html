@@ -5,21 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{color: rgb(25, 83, 23);}
+        .caja1{
+            background-color: red;
+            width: 180px;
+            height: 79px;
+        }
 
-        p{border: 1px solid, blue;}
+        /*Pone la caja roja al 50 %*/
+        .caja2{
+            background-color: red;
+            width: 50%;
+            height: 79px;
 
-        span{border: inherit;}
+        }
 
-        a {color: inherit;}
+        /* coge todo el ancho de la pagina y con vm coge el temaño respecto a lo que mida el ancho*/
+        .caja3{
+            background-color: red;
+            width: 50vw;
+            height: 79px;
+        }
 
+        /*Ponemos que el parrafo mida e ancho la mitad pero de la caja roja*/
+        .parrafo3{
+            background-color: green;
+            width: 40%;
+        }
+        /*Aqui la barra verde mide 40vW con respecto al ancho de toda la pagina y no de la caja*/
+        .parrafo4{
+            background-color: green;
+            width: 40vw;
+        }
+
+        section{
+            font-weight: 200; /*Grosor ligero o amplio, cuanto más grosor más negrita*/
+            line-height: 2; /*font-size >> 0.75 + 0.75  , aumenta el alto de la linea pero no midfica el tamño de la letra*/ 
+        }
     </style>
 </head>
-
 <body>
+    <h2>Ejercicio 1</h2>
+    <p>Parrafo1</p>
 
-    <h1>Herencia de color y borde ESTO ES UN h1</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Neque ipsa itaque, explicabo delectus eveniet voluptatum libero amet nihil, <span>ESTO ES UN SPAN</span> tenetur culpa nobis sint animi exercitationem <a href="www.google.com">ENLACE</a>quisquam sunt dignissimos omnis temporibus iusto!</p>
-  
+    <div class="caja1">
+        <p>Parrafo2</p>
+    </div>
+    <div class="caja2">
+        <p class="parrafo3">Parrafo3</p>
+    </div>
+    <div class="caja3">
+        <p class="parrafo4">Parrafo4</p>
+    </div>
+
+    <p>Parrafo 5</p>
 </body>
 </html>
