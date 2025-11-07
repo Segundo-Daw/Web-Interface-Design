@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 21 - ANIMACIONES</title>
+    <style>
+
+        .container{
+            background: blue;
+            padding: 20px 5px;
+        }
+
+        .caja{
+            background: #bdff07;
+            height: 100px;
+            width: 100px;
+            transition-property:all ;
+            transition-duration: 1s, 2s;
+            margin: 40px;
+            border: 2px solid r#FFF;
+            position: relative;
+            left: 0%;
+            
+            
+        }
+
+        .container:hover > .caja{
+            background: #ee8208;
+            left: 80%;
+            border: 5px solid rgb(188, 248, 85);
+            margin: 100px;
+        }
+        
+        .caja:first-child{
+            transition-timing-function: linear;
+        }
+
+        .caja:nth-child(2){
+            transition-timing-function: ease;
+        }
+        .caja:nth-child(3){
+            transition-timing-function: ease-in;
+        }
+        .caja:nth-child(4){
+            transition-timing-function: ease-out;
+        }
+        .caja:nth-child(5){
+            transition-timing-function: ease-in-out;
+        }
+
+
+        @media only screen and (max-width: 800px){   
+            div{
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+    </div>
+    
+</body>
+</html>

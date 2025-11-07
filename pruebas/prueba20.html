@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 20 - RESPONSIVE</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 45%;
+            padding: 20px;
+        }
+
+        .caja1{
+            background: rgb(148, 148, 148);
+        }
+
+        .caja2{
+            background: rgb(61, 61, 61);
+
+
+        }
+        /*only screen es para la pantalla porque despues se puede hacer para imprimirlo*/
+        @media only screen and (max-width: 800px){   
+            div{
+                display: block;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="caja1">
+        <h2>Título parrafo 1</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, debitis maiores? Labore repellendus deleniti repellat molestias laborum, culpa id a! Perspiciatis rem vero vel iure magni voluptas aspernatur atque quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat rem quo tempora minima praesentium repudiandae, quasi aspernatur reprehenderit possimus atque quis? Necessitatibus dolore, qui id harum autem vero quo?Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente distinctio consequatur, cum sint iste corporis magnam nemo voluptate, neque laudantium dicta dignissimos quia, quis deleniti quam quae ipsa optio.</p>
+    </div>
+    <div class="caja2">
+        <h2>Título parrafo 2</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, debitis maiores? Labore repellendus deleniti repellat molestias laborum, culpa id a! Perspiciatis rem vero vel iure magni voluptas aspernatur atque quasi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum fugiat temporibus dolores, labore aliquid iusto eveniet blanditiis, eius perspiciatis aspernatur nisi? Tempora nesciunt culpa ab porro! Quas quae necessitatibus enim.</p>
+    </div>
+</body>
+</html>
