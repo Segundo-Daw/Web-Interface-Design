@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas flexibles</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+
+
+        .flex-container{
+           
+            display:flex;
+            height: 100vh; 
+        }
+        
+        .flex-item{
+            color: #fff;
+            margin: 10px;
+            padding:10px;
+            height: 150px;
+            min-width: 150px;  /*para marcar el ancho minimo que van a tener las cajas */
+            
+        }
+
+        .item-azul{
+            background-color: rgb(29, 27, 167);
+            margin: auto;  /*lo centramos en la pagina*/
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-azul"></div>
+    </div>
+</body>
+</html>

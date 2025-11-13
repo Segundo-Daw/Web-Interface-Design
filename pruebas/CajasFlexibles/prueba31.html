@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas flexibles</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+
+
+        .flex-container{
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            height: 100vh; 
+            align-items: baseline;
+            /*con baseline lo que se hace es que da igual el tamaño que tenga la letra del div , mantiene su ancho aunque no lo ocupe entero*/
+
+        }
+        
+        .flex-item{
+            background-color: rgb(190, 16, 123);
+            color: #fff;
+            margin: 10px;
+            padding:10px;
+            min-width: 150px;  /*para marcar el ancho minimo que van a tener las cajas */
+            font-size: 10px;
+        }
+
+        .item-blue{
+            background-color: rgb(29, 27, 167);
+            font-size: 20px;
+        }
+        .item-orange{
+            background-color: orange;
+            font-size: 50px;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-blue">aaaaaaa</div>
+        <div class="flex-item ">bbbbb</div>
+        <div class="flex-item "></div>
+        <div class="flex-item "></div>
+        <div class="flex-item item-orange">cccccccc</div>
+    </div>
+</body>
+</html>

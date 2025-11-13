@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas flexibles</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+
+
+        /*Si utilizamos row-reverse nos cambia el orden de la ultima caja a la primera y asi sucesivamente. Si queremos que se muestre en orden podemos utilizar otra de las propiedades e flex-diretion*/
+        .flex-container{
+            display:flex;
+            flex-wrap:  wrap-reverse;
+        }
+       
+        /*si lo que queremos es que los div mantegan su tamaño y que cuando la pagina se haga mas pequeña vayan subiendo los de abajo de usa wrap-revferse*/
+
+
+
+        .flex-item{
+        
+            background-color: rgb(255, 64, 175);
+            color: #fff;
+            margin: 10px;
+            padding:10px;
+            height: 150px;
+            min-width: 150px;  /*para marcar el ancho minimo que van a tener las cajas */
+            flex: 1; /*esto hace que los items que vayan bajando ocupen todo el ancho de la pagina*/
+        }
+        .item-azul{
+            background-color: blue;
+        }
+        .item-yellow{
+            background-color: rgb(255, 166, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-azul"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item item-yellow"></div>
+    </div>
+</body>
+</html>

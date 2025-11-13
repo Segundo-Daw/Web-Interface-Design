@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas flexibles - FLEX BASIS (importante)</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+
+
+        .flex-container{
+            display:flex;
+            height: 100vh; 
+            
+
+        }
+        
+        .flex-item{
+            background-color: rgb(190, 16, 123);
+            color: #fff;
+            margin: 10px;
+            padding:10px;
+            width: 150px;  
+            height: 150px;
+        }
+
+        .item-blue{
+            flex-basis: max-content;/*En base al contenido se va adaptando*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, esse tempora. Deleniti porro vel animi ullam, nam blanditiis illum, culpa ab tenetur placeat nisi deserunt sapiente iure cum quisquam quis!</div>  
+    </div>
+</body>
+</html>
