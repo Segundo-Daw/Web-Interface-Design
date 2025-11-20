@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+
+        body{
+            
+            padding: 20px;
+            background: radial-gradient(circle, pink, red, orange );
+        }
+        
+        .grid-container{
+            display: grid;
+            background: #0f0;
+            grid-template-rows: 150px 150px 150px ;
+            grid-template-columns: 1fr 1fr 1fr ;
+            
+        }
+
+        .grid-item{
+            border: 2px solid #000;
+        }
+        .grid-item:first-child{
+            background-color: #00F;
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+
+        .grid-item:nth-child(3){
+            background-color: rgb(255, 17, 0);
+            grid-column: 3/4;
+            grid-row: 2/4;
+           
+        }
+        .grid-item:nth-child(4){
+            background-color: rgb(255, 251, 0);
+            grid-column: 1/3;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1-GR</div>
+        <div class="grid-item">2-GR</div>
+        <div class="grid-item">3-GR</div>
+        <div class="grid-item">4-GR</div>
+        <div class="grid-item">5-GR</div>
+        <div class="grid-item">6-GR</div>
+        <div class="grid-item">7-GR</div>
+        <div class="grid-item">8-GR</div>
+        <div class="grid-item">9-GR</div>
+        <div class="grid-item">10-GR</div>
+
+    </div>
+</body>
+</html>     
