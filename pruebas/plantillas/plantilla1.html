@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Menú, Cajas y Footer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .flex-container {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #fff4da;
+    }
+
+
+    .menu {
+      background: linear-gradient(90deg, #db8b2f 0%, #442305 100%);
+      color: #fff;
+      padding: 35px 30px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu__nav {
+      display: flex;
+      justify-content: space-between; /* separa logo a la izquierda y menú a la derecha */
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu__logo {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+
+    .menu__list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu__item {
+      margin: 10px 12px;
+    }
+
+    .menu__link {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 6px;
+    }
+
+    .menu__link:hover {
+      background: rgb(255, 0, 217);
+    }
+
+
+    .cards {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;   /*poner wrap-reverse aqui si queremos que vayan al reves las cajas*/
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .cards__box {
+      width: 220px;
+      height: 220px;
+      border-radius: 40px;
+      justify-content: center;
+    }
+
+
+    .cards__box1 {
+      background: #9f6f30;
+    }
+
+    .cards__box2 {
+      background: #ffd736;
+    }
+
+    .cards__box3 {
+      background: #ff9b29;
+    }
+
+    .cards__box4 {
+      background: #a89014;
+    }
+
+    .cards__box5 {
+      background: #ff7112;
+    }
+
+    .cards__box6 {
+      background: #a0c810;
+    }
+
+    .cards__box7 {
+      background: #a6d788;
+    }
+
+    .cards__box8 {
+      background: #146f06;
+    }
+
+    .cards__box9 {
+      background: #05cf5cfa;
+    }
+
+    .cards__box10 {
+      background: #412103;
+    }
+
+    .cards__box11 {
+      background: #755332;
+    }
+
+    .cards__box12 {
+      background: #605c2f;
+    }
+
+
+    .footer {
+      background: #512405e8;
+      color: #ffffff;
+      text-align: center;
+      padding: 60px;
+      font-size: 1.5em;
+    }
+
+
+    @media (max-width: 768px) {
+      .menu__nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu__logo {
+        margin: 10px 0;
+      }
+
+      .menu__list {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      .menu__item {
+        margin: 8px 0;
+      }
+
+      .cards__box {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <header class="menu">
+    <nav class="menu__nav">
+      <div class="menu__logo">Mi Página Web</div>
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link"> Inicio</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Servicios</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Acerca</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="flex-container">
+    <div class="cards">
+      <div class="cards__box cards__box1">CAJA - 1</div>
+      <div class="cards__box cards__box2">CAJA - 2</div>
+      <div class="cards__box cards__box3">CAJA - 3</div>
+      <div class="cards__box cards__box4">CAJA - 4</div>
+      <div class="cards__box cards__box5">CAJA - 5</div>
+      <div class="cards__box cards__box6">CAJA - 6</div>
+      <div class="cards__box cards__box7">CAJA - 7</div>
+      <div class="cards__box cards__box8">CAJA - 8</div>
+      <div class="cards__box cards__box9">CAJA - 9</div>
+      <div class="cards__box cards__box10">CAJA - 10</div>
+      <div class="cards__box cards__box11">CAJA - 11</div>
+      <div class="cards__box cards__box12">CAJA - 12</div>
+    </div>
+  </div>
+
+  <footer class="footer">FOOTER</footer>
+</body>
+
+</html>
