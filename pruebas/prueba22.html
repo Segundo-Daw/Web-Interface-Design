@@ -7,41 +7,68 @@
     <title>Prueba 22</title>
     <style>
 
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         .nav{
             background: rgb(12, 12, 221);
             color: #fff;
-            position: relative;
         }
 
-        .nav_ul{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-        .nav__li {
-            margin: 0 1rem;
-        }
-
-        .nav__li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem;
+        .nav__ul{
+            .nav__li{      
             display: inline-block;
+            margin: 1vw;
+            }
+        }
+
+        .nav__responsive-ul{
+            display: none;
+        }
+
+        nav{
+            background-color: rgb(77, 141, 194);
+        }
+
+        body{
+            background-color: rgb(0, 102, 255);
+        }
+
+        .nav__ul {
+            display: none;       
+        }
+
+        .nav__responsive-ul{
+            display: initial;
+            margin: 1vh;
+        }
+
+        .nav__responsive-button{
+            position: relative;
+            left: 93%;
+        }
+        .nav__li-continer{
+            transition-property: all;
+            transition-duration: 1s;
+            background-color: #0000c5;
+            width: 25vw;
+            padding: 1vh;
+            list-style-type: none;
+            position: absolute;
+            top: -20%;
+        }
+
+        .nav__responsive-li{
+            margin: 2vw;
+        }
+
+        .nav__responsive-ul:hover .nav__li-continer{
+            top:10%
         }
 
         
-
-
-
-        
-
-
-
-
-
-
-
-
         @media only screen and (max-width: 800px){   
             div{
                 display: block;

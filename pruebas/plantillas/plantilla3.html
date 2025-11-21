@@ -32,7 +32,7 @@
 
         /* HEADER */
         .header {
-            background: #4a148c;
+            background: #ccc915;
             
             color: #fff;
             padding: 15px 20px;
@@ -44,13 +44,17 @@
             margin: auto;
             display: flex;
             align-items: center;
-            justify-content: center; 
+            justify-content: space-between;            
             gap: 40px;
         }
 
         .menu__logo {
             font-size: 1.5rem;
             font-weight: bold;
+        }
+        
+        .menu__logo img{
+            height: 80px;
         }
 
         .menu__list {
@@ -69,6 +73,13 @@
             text-decoration: underline;
         }
 
+        .general-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #fff;
+        }
+
         /* FLEX CONTAINER */
         .flex-container {
             display: flex;
@@ -84,11 +95,12 @@
         }
 
         .flex-container__item {
-            background: #e1bee7;
+            background: #600470;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
             text-align: center;
+            color: #fff;
         }
 
         /* FOOTER */
@@ -125,7 +137,7 @@
 
     <header class="header">
         <nav class="menu">
-            <h1 class="menu__logo">Mi Sitio</h1>
+            <h1 class="menu__logo"><img src="minion.jpg"></h1>
             <ul class="menu__list">
                 <li class="menu__item"><a href="#">Inicio</a></li>
                 <li class="menu__item"><a href="#">Servicios</a></li>
@@ -134,12 +146,20 @@
         </nav>
     </header>
 
-    <main>
+    <main class="general-container">
         <div class="flex-container">
-            <div class="flex-container__item">Elemento 1</div>
-            <div class="flex-container__item">Elemento 2</div>
-            <div class="flex-container__item">Elemento 3</div>
+            <div class="flex-container__item">Caja 1</div>
+            <div class="flex-container__item">Caja 2</div>
+            <div class="flex-container__item">Caja 3 </div>
         </div>
+
+        <div class="flex-container">
+            <div class="flex-container__item">Caja 4</div>
+            <div class="flex-container__item">Caja 5</div>
+            <div class="flex-container__item">Caja 6 </div>
+        </div>
+
+
     </main>
 
     <footer class="footer">

@@ -171,6 +171,45 @@
     }
 
 
+    /* ===== MODO OSCURO ===== */
+    @media (prefers-color-scheme: dark) {
+      .flex-container {
+        background: #1e1e1e;
+        color: #ffffff;
+      }
+
+      .menu {
+        background: linear-gradient(90deg, #442305 0%, #1b0f02 100%);
+        box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+      }
+
+      .menu__logo {
+        color: #ffd900;
+      }
+
+      .menu__link{
+        color: #fff;
+      }
+
+      .menu__link:hover {
+        background: #ff00c8;
+      }
+
+      /*cajas*/
+      .cards__box {
+        color: #fff;
+        filter: brightness(0.75);
+      }
+
+      /*footer*/
+      .footer {
+        background: #000000d0;
+        color: #fff;
+      }
+    }
+
+
+
   </style>
 </head>
 

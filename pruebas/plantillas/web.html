@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla BEM Footer Abajo</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        /* BODY FLEX CONTAINER */
+        body {
+            background-image: url("background.jpg");  
+            background-repeat: space;
+            background-attachment: fixed; /*para que se quede fija al hacer scroll*/
+            
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+
+  
+        <nav class="menu">
+            <h1 class="menu__logo">DiseñoWeb</h1>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#">Inicio</a></li>
+                <li class="menu__item"><a href="#">Características</a></li>
+                <li class="menu__item"><a href="#">Precio</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="flex-container1">
+            <h1>Tu vida saludable en un sola app</h1>
+            <p>Controla tus hábitos de agua, pasoso y sueño con informes claros y motivadores</p>
+            <div class="bottom"><a href="#">Descarga ahora</a></div>
+        </div>
+
+
+
+
+        <div class="flex-container">
+            <div class="flex-container__item">
+                <h3>Seguimiento diario</h3>
+                <p>Registra tus hábitos en segundo con una interfaz sencilla e intuitiva</p>
+            </div>
+            <div class="flex-container__item">
+                <h3>Estadísticas visuales</h3>
+                <p>Gráficas limpian que te ayudan a ver tu progreso de un vistazo</p>
+            </div>
+            <div class="flex-container__item">
+                <h3>Recordatorios inteligentes</h3>
+                <p>Recibe avisos personalizados para no olvidar tus hábitos clave</p>
+            </div>
+        </div>
+        
+
+
+    
+
+    <footer class="footer">
+        <p>2025 DiseñosWeb. Todos los derechos reservados</p>
+        
+    </footer>
+
+</body>
+</html>
