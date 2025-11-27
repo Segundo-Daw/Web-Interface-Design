@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba imagenes - Grid</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        }
+
+        body{
+            background: red;
+            padding: 20px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); /*auto-fill para que se vayan bajando autoatiocamente*/
+            grid-template-rows: (1fr, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: 100px;
+            grid-auto-flow: dense;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;        
+        }
+
+        .grid-container img:first-child{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .grid-container img:nth-child(2){
+           grid-column: span 2;
+           
+        }
+
+        .grid-container img:nth-child(3){
+           grid-row: span 4;
+        }
+        
+        .grid-container img:nth-child(4){
+           grid-row: span 2;
+        }
+
+        .grid-container img:nth-child(5){
+           grid-row: span 2;
+        }
+
+        .grid-container img:nth-child(6){
+            grid-column: span 3;
+           grid-row: span 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <img src="Imagenes/imagen1.jpeg" alt="">
+        <img src="Imagenes/imagen2.jpeg" alt="">
+        <img src="Imagenes/imagen3.webp" alt="">
+        <img src="Imagenes/imagen4.jpeg" alt="">
+        <img src="Imagenes/imagen5.jpeg" alt="">
+        <img src="Imagenes/imagen6.jpeg" alt="">
+        <img src="Imagenes/imagen7.jpeg" alt="">
+        <img src="Imagenes/imagen8.jpeg" alt="">
+        <img src="Imagenes/imagen9.webp" alt="">
+        <img src="Imagenes/imagen10.jpeg" alt="">
+        <img src="Imagenes/imagen11.jpeg" alt="">
+        <img src="Imagenes/imagen12.jpeg" alt="">
+        <img src="Imagenes/imagen13.jpeg" alt="">
+        <img src="Imagenes/imagen14.png" alt="">
+        <img src="Imagenes/imagen15.jpeg" alt="">
+        <img src="Imagenes/imagen16.jpeg" alt="">
+        <img src="Imagenes/imagen17.jpeg" alt="">
+        <img src="Imagenes/imagen18.jpeg" alt="">
+        <img src="Imagenes/imagen19.jpeg" alt="">
+        <img src="Imagenes/imagen20.jpeg" alt="">
+        <img src="Imagenes/imagen21.jpeg" alt="">
+        <img src="Imagenes/imagen22.jpeg" alt="">
+        <img src="Imagenes/imagen23.jpeg" alt="">
+        <img src="Imagenes/imagen24.jpeg" alt="">
+    </div>
+    
+</body>
+</html>

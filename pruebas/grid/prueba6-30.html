@@ -13,35 +13,41 @@
         body{
             
             padding: 20px;
-            background: radial-gradient( circle, pink, red, orange, blue );
+            background: radial-gradient(circle, rgb(239, 243, 20), rgb(7, 91, 102));        
         }
         
         .grid-container{
             display: grid;
-            background: #0f0;
-            grid-template-rows: repeat(3,150px);
-            grid-template-columns: repeat(3, 150px);
-            grid-auto-rows: row;  /*este seria el implicito, que no tiene un tamaño definido con los templates*/
+            background: rgb(61, 61, 61);
+            grid-template-rows: repeat(3,200px);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 150px));
+            grid-gap: 15px 25px;
+            height: 800px;
+            justify-content: center;
+            align-content: start;
+
             
         }
 
         .grid-item{
             border: 2px solid #000;
-            background-color: #0f0;
+            background: #0f0;
+            font-size: 50px;
+            padding: 50px;
         }
-        .grid-item:first-child{
-            background-color: #00F;
+
+         .grid-item:first-child{
             
         }
 
         .grid-item:nth-child(3){
-            background-color: rgb(255, 17, 0);
             
            
         }
         .grid-item:nth-child(4){
-            background-color: rgb(255, 251, 0);
+            
         }
+   
     </style>
 </head>
 <body>
@@ -55,10 +61,7 @@
         <div class="grid-item">7-GR</div>
         <div class="grid-item">8-GR</div>
         <div class="grid-item">9-GR</div>
-        <div class="grid-item">10-GR</div>
-        <div class="grid-item">11-GR</div>
-        <div class="grid-item">12-GR</div>
-
+      
     </div>
 </body>
 </html>     
