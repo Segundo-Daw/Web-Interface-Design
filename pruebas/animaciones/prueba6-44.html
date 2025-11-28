@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            
+        }
+        .content{
+            padding: 20px 5px;
+            background: lightskyblue;
+        }
+        .caja{
+            background: rgb(78, 8, 95);
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            animation-name: movimiento;
+            animation-duration: 6s;
+            position: relative;
+        }
+        @keyframes movimiento {
+            from{
+                left: 0;
+            }
+            to{
+                left: 80%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="caja"></div>
+    </div>
+    
+</body>
+</html>

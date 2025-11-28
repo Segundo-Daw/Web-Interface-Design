@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background: rgba(255, 255, 255, 0.705);
+     
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .head,.main,.aside,.footer{
+        padding: 20px;
+    }
+
+    .header{
+        background-color: rgb(171, 214, 174);
+        flex-basis: 70px;
+    }
+    .main{
+        background-color: rgb(182, 251, 253);
+        flex-basis: 300px;
+        flex-grow: 2;
+        flex-shrink: 0; /*evita que un elemento dentro de un contenedor flex se encoja cuando el espacio horizontal no es suficiente.*/
+    }
+
+    .aside{
+        background-color:  rgb(255, 252, 87);
+        flex-basis: 200px;
+        flex-wrap: 1;
+        flex-shrink: 0;
+    }
+    .footer{
+        background-color:  rgb(200, 170, 240);
+        flex-grow: 0;
+        flex-basis: 70px;
+    }
+   
+    @media screen and (min-width: 700px){
+
+        .aside{
+            
+            
+            
+        }
+    }
+
+   
+
+   
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="content">
+
+        <header class="header">Con Grid</header>
+
+        <main class="main">Main</main>
+
+        <aside class="aside">Aside</aside>
+
+        <footer class="footer">Footer</footer>
+
+    </div>
+</body>
+</html>

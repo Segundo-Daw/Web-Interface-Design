@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        .content{
+            padding: 20px 5px;
+            background: lightskyblue;
+        }
+        .caja{
+            background: rgb(78, 8, 95);
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            animation-name: movimiento;
+            animation-duration: 4s;
+            position: relative;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(0,1.09,.52,-0.87)
+
+        }
+      
+        @keyframes movimiento {
+            0%{
+                left: 0;
+                background: pink;
+            }
+            25%{
+                background: rgb(114, 6, 202);
+            }
+            50%{
+                background: rgb(255, 60, 0);
+            }
+            75%{
+                background: rgb(0, 47, 255);
+            }
+            100%{
+                background: rgb(228, 188, 113);
+                left: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="caja"></div>
+    </div>
+</body>
+</html>

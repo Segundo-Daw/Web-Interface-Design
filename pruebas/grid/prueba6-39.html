@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background: rgba(255, 255, 255, 0.705);
+        padding: 20px;
+    }
+    .grid-container{
+        background-color: rgb(138,138,138);
+        margin: 10px;
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "aside aside main"
+        "aside aside main"
+        "aside aside main"
+        "aside aside main"
+        "footer footer footer"
+        ;
+        grid-template-rows: repeat(auto-fill 1fr);
+        height: 95vh;
+        border: 5px solid white;
+
+    }
+
+    .grid-item{
+        
+    }
+
+    .grid-header{
+        background-color: rgb(174, 142, 248);
+        grid-area: header;
+    }
+    .grid-header a{
+        text-decoration: none;
+
+    }
+
+    .grid-main{
+        background-color: rgb(190, 0, 175);
+        grid-area: main;
+    }
+    .grid-aside{
+        background-color: rgb(0, 120, 136);
+        grid-area: aside;
+    }
+
+    .grid-footer{
+        background-color: rgb(30, 0, 70);
+        grid-area: footer;
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header class="grid-container">
+
+        <header class="grid-header">
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 2</a></li>
+            </ul>
+        </header>
+
+        <main class="grid-main">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quibusdam ab inventore omnis amet accusantium assumenda, quam consequuntur adipisci nihil quae ad dolorem doloremque? Magnam sequi provident quo natus perferendis!
+
+        </main>
+
+        <aside class="grid-aside">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum excepturi quasi saepe. Blanditiis fuga quas quam ratione enim laboriosam veritatis facere nihil nisi ab, optio dolores totam dolor! Ratione, optio.</aside>
+
+        <footer class="grid-footer">
+
+        </footer>
+
+    </div>
+</body>
+</html>

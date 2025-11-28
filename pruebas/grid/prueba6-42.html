@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background: rgba(255, 255, 255, 0.705);
+     
+    }
+    .grid-container{
+        background-color: rgb(138,138,138);
+        display: grid;
+         /* 3 columnas iguales */
+        grid-template-columns: 1fr 1fr 1fr ;
+
+        /* Header - main/aside (4 filas) - footer */
+        grid-template-rows:  80px 1fr 1fr 1fr 1fr 80px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .grid-header{
+        background-color: rgb(171, 214, 174);
+        grid-column: 1 / span 3; /* ocupa 3 columnas */
+        grid-row: 1;        
+        padding: 10px;
+    }
+   
+    .grid-main{
+        background-color: rgb(160, 230, 248);
+        grid-column: 1 / span 2; /* ocupa 2 columnas */
+        grid-row: 2 / span 4;    /* ocupa 4 filas */
+        padding: 10px;
+
+    }
+    .grid-aside{
+        background-color: rgb(255, 252, 87);
+        grid-column: 3;          /* solo columna 3 */
+        grid-row: 2 / span 4;    /* ocupa 4 filas */
+        padding: 10px;
+
+    }
+
+    .grid-footer{
+        background-color: rgb(200, 170, 240);
+        grid-column: 1 / span 3; /* ocupa 3 columnas */
+        grid-row: 6;    
+        padding: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header class="grid-header">Con Grid</header>
+
+        <main class="grid-main">Main</main>
+
+        <aside class="grid-aside">Aside</aside>
+
+        <footer class="grid-footer">Footer</footer>
+
+    </div>
+</body>
+</html>
