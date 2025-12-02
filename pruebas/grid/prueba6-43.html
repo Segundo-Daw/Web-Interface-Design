@@ -4,79 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-    *{
-        padding: 0;
-        margin: 0;
-    }
+        *{margin: 0; padding: 0;}
 
-    body{
-        background: rgba(255, 255, 255, 0.705);
-     
-    }
-    
-    .content{
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-    
-    .head,.main,.aside,.footer{
-        padding: 20px;
-    }
+        .container{
+            width: 100%;
+        }
 
-    .header{
-        background-color: rgb(171, 214, 174);
-        flex-basis: 70px;
-    }
-    .main{
-        background-color: rgb(182, 251, 253);
-        flex-basis: 300px;
-        flex-grow: 2;
-        flex-shrink: 0; /*evita que un elemento dentro de un contenedor flex se encoja cuando el espacio horizontal no es suficiente.*/
-    }
+        .header{
+            background: rgb(171,214,174);
+            padding: 10px;
+        }
 
-    .aside{
-        background-color:  rgb(255, 252, 87);
-        flex-basis: 200px;
-        flex-wrap: 1;
-        flex-shrink: 0;
-    }
-    .footer{
-        background-color:  rgb(200, 170, 240);
-        flex-grow: 0;
-        flex-basis: 70px;
-    }
-   
-    @media screen and (min-width: 700px){
+        .main{
+            background: rgb(160,230,248);
+            padding: 10px;
+        }
 
         .aside{
-            
-            
-            
+            background: rgb(255,252,87);
+            padding: 10px;
         }
-    }
 
-   
+        .footer{
+            background: rgb(200,170,240);
+            padding: 10px;
+        }
 
-   
 
+        @media (min-width: 768px){
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-color: rgb(138,138,138);
+            }
+
+            .header{
+                height: 80px;
+            }
+
+            .footer{
+                height: 80px;
+            }
+
+            /* Main + Aside en horizontal SIN middle */
+            .main-aside{
+                flex: 1;              /* ocupa el espacio central */
+                display: flex;        /* esta regla es CLAVE */
+                flex-direction: row;
+            }
+
+            .main{
+                flex: 2;              /* como 2 columnas */
+            }
+
+            .aside{
+                flex: 1;              /* como 1 columna */
+            }
+        }
     </style>
 </head>
-
 <body>
 
+    <div class="container">
 
-    <div class="content">
+        <header class="header">Con Flex</header>
 
-        <header class="header">Con Grid</header>
-
-        <main class="main">Main</main>
-
-        <aside class="aside">Aside</aside>
+        <div class="main-aside">
+            <main class="main">Main</main>
+            <aside class="aside">Aside</aside>
+        </div>
 
         <footer class="footer">Footer</footer>
 
     </div>
+
 </body>
 </html>
