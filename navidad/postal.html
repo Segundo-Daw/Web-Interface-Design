@@ -5,60 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postal Navideña</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
+         * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            height: 100vh;
-            display: grid;
-            place-items: center; /* Centra en ambas direcciones */
-            background: radial-gradient(pink, rgb(177, 96, 110), rgb(138, 34, 51), rgb(143, 5, 28),rgb(177, 96, 110));
-        }
+    body {
+        
+        background: radial-gradient(circle,
+            #ffdde1, #ee9ca7, #d74262, #8a0621, #d74262);
+        font-family: "Georgia", serif;
 
-        .grid-container{
-            display: grid; /* Activa el modo grid */
-            width: 80%; /* Establece el ancho fijo deseado */
-            height: 70vh; /* Establece la altura fija deseada (ej: 70% de la altura de la ventana) */
-            justify-content: center; /* Centra los elementos horizontalmente */
-            align-items: center; /* Centra los elementos verticalmente */
-            grid-template-columns: 400px 200px; /* Define el tamaño de las columnas */
-            grid-template-rows: 300px 300px; /* Define el tamaño de las filas */
-            background-color: #046110d8;
-            border: 6px dotted rgb(56, 4, 4);
-            border-radius: 50px;
+    }
 
+    .postal {
+        width: 100%;
+        
+        max-width: 900px;
+        background: white;
 
-            
-        }
+    }
 
-         .grid-item{
-            background-color: lightblue;
-            border: 1px solid blue;
-            text-align: center;
-            padding: 10px;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;        
-        }
+    /* ---------- TÍTULO -----------*/
+    .texto-central {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #8a0621;
+        margin-bottom: 25px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
 
+    
 
         
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <img src="muerdago.webp" alt="">
-        <div class="grid-item">
+    <div class="postal">
+        <div class="texto-central">
+            🎄 ¡Feliz Navidad! 🎁
         </div>
-        
-        
-
     </div>
+
+   
+
+
     
 </body>
 </html>

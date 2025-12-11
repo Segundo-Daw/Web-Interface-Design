@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        .content{
+            padding: 20px 5px;
+            background: lightskyblue;
+        }
+        .caja{
+            background: rgb(78, 8, 95);
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            display: flex;
+            transition: Transfom 1s; /*aqui le estamos dando nombre a la variable*/
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /*https://bennettfeely.com/clippy/   lo cogemos de esa pagina web*/
+        }
+      
+        b{
+            margin: auto;
+            transform: skew(-180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="caja"><b>Carolina Ruescas</b></div>
+    </div>
+</body>
+</html>
