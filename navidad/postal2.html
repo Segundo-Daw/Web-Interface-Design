@@ -11,26 +11,23 @@
             box-sizing: border-box;
         }
 
-        body {
+        body{
             background: rgb(98, 0, 0);
-            position: relative; /* Permite colocar elementos dentro de este contenedor */
-            overflow: hidden;
-            height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
         }
 
-        .grid-container {
+       .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            grid-auto-rows: 200px;
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 columnas */
+            grid-auto-rows: 200px; 
+            gap: 10px;                             /* espacio entre elementos */
             width: 100vw;
             height: 200px;
-            margin: 50px auto;
+            margin: 50px auto;                     /* centra el grid en la página */
             overflow: hidden;
             background: white;
         }
 
-        .grid-container img {
+        .grid-container img{
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -40,22 +37,17 @@
 
         .arbol-mensaje-contenedor {
             display: flex;
-            justify-content: center;
+            justify-content: center;      /* centra el conjunto */
             align-items: center;
-            gap: 40px;
-            position: relative; /* Para que el mensaje esté sobre el árbol */
-            z-index: 1; /* Asegura que este contenedor esté por encima del fondo */
+            gap: 40px;                    /* espacio entre árbol y mensaje */
+            margin-top: 60px;
+            margin-bottom: 60px;
         }
 
         /* Imagen grande del árbol */
         .arbol-img {
-            position: absolute; /* Hace que el árbol se ubique en el fondo */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Hace que el árbol cubra toda el área */
-            z-index: -1; /* Coloca el árbol detrás del mensaje */
+            height: 700px;
+            object-fit: contain;
         }
 
         /* Caja del mensaje */
@@ -66,7 +58,6 @@
             border-radius: 12px;
             border: 3px solid #d40000;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            z-index: 2; /* Asegura que el mensaje esté encima del árbol */
         }
 
         .mensaje-box h2 {
@@ -80,6 +71,8 @@
             line-height: 1.4;
         }
 
+
+
         @keyframes balanceo {
             0%   { transform: rotate(0deg); }
             25%  { transform: rotate(7deg); }
@@ -87,13 +80,11 @@
             75%  { transform: rotate(-7deg); }
             100% { transform: rotate(0deg); }
         }
-
+    
     </style>
 </head>
 <body>
 
-    <!-- Fondo con el árbol de Navidad -->
-    <img src="arbol.png" class="arbol-img" alt="Árbol de Navidad">
 
     <div class="grid-container">
         <img src="papanoel.png" alt="">
@@ -106,13 +97,19 @@
         <img src="reno.png" alt="">
     </div>
 
-    <!-- Contenedor del mensaje sobre el árbol -->
     <div class="arbol-mensaje-contenedor">
+    
+        <img src="arbol.png" class="arbol-img" alt="Árbol de Navidad">
+
         <div class="mensaje-box">
             <h2>¡Feliz Navidad!</h2>
             <p>Que estas fiestas estén llenas de alegría, magia y momentos inolvidables.</p>
         </div>
+
     </div>
 
+
+
+   
 </body>
 </html>
