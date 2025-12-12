@@ -5,37 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postal Navideña</title>
     <style>
-         * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
+        body{
+            background: rgb(98, 0, 0);
+        }
+
+       .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(4, 1fr);    /* 3 filas */
+  gap: 10px;                             /* espacio entre elementos */
+  width: 800px;
+  height: 600px;
+  margin: 50px auto;                     /* centra el grid en la página */
+}
+
+.img-border {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.center-box {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Posicionamiento de la postal en el centro del grid */
+.center-box {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.grid-container img:first-child{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
         
-        background: radial-gradient(circle,
-            #ffdde1, #ee9ca7, #d74262, #8a0621, #d74262);
-        font-family: "Georgia", serif;
-
-    }
-
-    .postal {
-        width: 100%;
-        
-        max-width: 900px;
-        background: white;
-
-    }
-
-    /* ---------- TÍTULO -----------*/
-    .texto-central {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #8a0621;
-        margin-bottom: 25px;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    }
 
     
 
@@ -43,10 +64,28 @@
     </style>
 </head>
 <body>
-    <div class="postal">
-        <div class="texto-central">
-            🎄 ¡Feliz Navidad! 🎁
+
+
+    <div class="grid-container">
+        <img src="papanoel.png" alt="Imagen 1" class="img-border">
+        <img src="img2.jpg" alt="Imagen 2" class="img-border">
+        <img src="img3.jpg" alt="Imagen 3" class="img-border">
+        
+        <img src="img4.jpg" alt="Imagen 4" class="img-border">
+  
+        <div class="center-box">
+            <!-- Aquí va tu postal -->
+            <h2>Mi Postal</h2>
+            <p>Texto o contenido aquí</p>
         </div>
+        
+        <img src="img5.jpg" alt="Imagen 5" class="img-border">
+        
+        <img src="img6.jpg" alt="Imagen 6" class="img-border">
+        <img src="img7.jpg" alt="Imagen 7" class="img-border">
+        <img src="papanoel.png" alt="Imagen 8" class="img-border">
+        <img src="img9.jpg" alt="Imagen 9" class="img-border">
+        <img src="img10.jpg" alt="Imagen 10" class="img-border">
     </div>
 
    
