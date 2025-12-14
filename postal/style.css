@@ -1,0 +1,186 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            /* FONDO MARCO */
+            background-image: url("imagenes/fondo.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            /* COLOR DETRÁS DEL MARCO */
+            background-color: rgb(98, 0, 0);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Georgia, serif;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .postal {
+            position: relative;
+            width: 700px;
+            height: 700px;
+        }
+
+      
+        .texto-circular {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 620px;
+            height: 620px;
+            pointer-events: none;
+            animation: girar 40s linear infinite;
+            z-index: 2;
+        }
+
+        .texto-circular span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform-origin: 0 310px;
+            color: #fff8dc;
+            font-size: 22px;
+            letter-spacing: 4px;
+            white-space: pre;
+        }
+
+        .bola-cristal {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 520px;
+            height: 520px;
+            border-radius: 50%;
+            z-index: 1;
+
+            background: radial-gradient(circle at top left,rgba(255,255,255,0.9),rgba(255,255,255,0.4),rgba(255,255,255,0.15));
+            border: 4px solid rgba(255,255,255,0.6);
+            box-shadow:inset -18px -18px 35px rgba(255,255,255,0.4),inset 18px 18px 35px rgba(0,0,0,0.15), 0 35px 70px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        /* REFLEJOS */
+        .bola-cristal::before {
+            content: "";
+            position: absolute;
+            top: 55px;
+            left: 75px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.6);
+            filter: blur(14px);
+        }
+
+        .bola-cristal::after {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            right: 90px;
+            width: 180px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            filter: blur(20px);
+        }
+
+        .arbol-img {
+            height: 360px;
+            z-index: 1;
+        }
+
+        .snow {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(2px 2px at 20% 30%, white 50%, transparent 50%),
+                radial-gradient(3px 3px at 40% 70%, white 50%, transparent 50%),
+                radial-gradient(2px 2px at 60% 20%, white 50%, transparent 50%),
+                radial-gradient(3px 3px at 80% 60%, white 50%, transparent 50%);
+            background-size: 200px 200px;
+            animation: snowFall 6s linear infinite;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .postal {
+                width: 500px;
+                height: 500px;
+            }
+
+            .bola-cristal {
+                width: 380px;
+                height: 380px;
+            }
+
+            .texto-circular {
+                width: 450px;
+                height: 450px;
+            }
+
+            .texto-circular span {
+                transform-origin: 0 225px;
+                font-size: 18px;
+            }
+
+            .arbol-img {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-size: 95vmin;
+            }
+
+            .postal {
+                width: 380px;
+                height: 380px;
+            }
+
+            .bola-cristal {
+                width: 280px;
+                height: 280px;
+            }
+
+            .texto-circular {
+                width: 330px;
+                height: 330px;
+            }
+
+            .texto-circular span {
+                transform-origin: 0 165px;
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .arbol-img {
+                height: 200px;
+            }
+        }
+
+        /*  ANIMACIONES  */
+        @keyframes snowFall {
+            from { background-position: 0 0; }
+            to   { background-position: 0 300px; }
+        }
+
+        @keyframes girar {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }

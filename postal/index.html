@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postal Navideña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="postal">
+
+        <!-- TEXTO CIRCULAR -->
+        <div class="texto-circular" id="texto"></div>
+
+        <!-- BOLA DE CRISTAL -->
+        <div class="bola-cristal">
+            <img src="imagenes/arbol.png" class="arbol-img" alt="Árbol de Navidad">
+        </div>
+
+    </div>
+
+    <div class="snow"></div>
+
+    <!-- SCRIPT TEXTO CIRCULAR  -->
+    <script>
+    const contenedor = document.getElementById("texto");
+    const textoBase = " • FELIZ NAVIDAD ";
+    let angulo = 0;
+
+    while (angulo < 360) {
+        textoBase.split("").forEach(letra => {
+            const span = document.createElement("span");
+            span.textContent = letra;
+
+            const espacio = letra === "•" ? 6 : 12;
+
+            span.style.transform = `rotate(${angulo}deg)`;
+            contenedor.appendChild(span);
+
+            angulo += espacio;
+        });
+    }
+    </script>
+
+</body>
+</html>
+

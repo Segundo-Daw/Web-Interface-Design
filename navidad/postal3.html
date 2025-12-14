@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Postal Navideña</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    background: rgb(98, 0, 0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+
+/* ===== CONTENEDOR GENERAL ===== */
+.postal {
+    position: relative;
+    width: 700px;
+    height: 700px;
+}
+
+/* ===== TEXTO CIRCULAR ===== */
+.texto-circular {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 620px;
+    height: 620px;
+    pointer-events: none;
+
+    /* GIRO DEL TEXTO */
+    animation: girar 40s linear infinite;
+}
+
+.texto-circular span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: 0 310px; /* radio del texto */
+    color: #fff8dc;
+    font-size: 22px;
+    letter-spacing: 4px;
+    white-space: pre;
+}
+
+/* ===== BOLA DE CRISTAL ===== */
+.bola-cristal {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.4),
+        rgba(255,255,255,0.15)
+    );
+    border: 4px solid rgba(255,255,255,0.6);
+    box-shadow:
+        inset -18px -18px 35px rgba(255,255,255,0.4),
+        inset 18px 18px 35px rgba(0,0,0,0.15),
+        0 35px 70px rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+/* REFLEJOS */
+.bola-cristal::before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 75px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    filter: blur(14px);
+}
+
+.bola-cristal::after {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    right: 90px;
+    width: 180px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    filter: blur(20px);
+}
+
+/* ===== ÁRBOL ===== */
+.arbol-img {
+    height: 360px;
+    z-index: 1;
+}
+
+/* ===== NIEVE ===== */
+.snow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white 50%, transparent 50%),
+        radial-gradient(3px 3px at 40% 70%, white 50%, transparent 50%),
+        radial-gradient(2px 2px at 60% 20%, white 50%, transparent 50%),
+        radial-gradient(3px 3px at 80% 60%, white 50%, transparent 50%);
+    background-size: 200px 200px;
+    animation: snowFall 6s linear infinite;
+}
+
+
+/* ===== MUÉRDAGO HEADER & FOOTER ===== */
+.muerdago {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 120px; /* ajusta según tu imagen */
+    background-image: url("muerdagoFooter.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Arriba */
+.muerdago-top {
+    top: 0;
+}
+
+/* Abajo */
+.muerdago-bottom {
+    bottom: 0;
+    transform: rotate(180deg); /* opcional: espejo */
+}
+
+@media (max-width: 768px) {
+    .postal {
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 480px) {
+    .postal {
+        transform: scale(0.55);
+    }
+}
+
+
+/* ===== ANIMACIONES ===== */
+@keyframes snowFall {
+    from { background-position: 0 0; }
+    to   { background-position: 0 300px; }
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<div class="muerdago muerdago-top"></div>
+
+<div class="postal">
+
+    <!-- TEXTO CIRCULAR -->
+    <div class="texto-circular" id="texto"></div>
+
+    <!-- BOLA DE CRISTAL -->
+    <div class="bola-cristal">
+        <img src="arbol.png" class="arbol-img" alt="Árbol de Navidad">
+    </div>
+
+</div>
+
+<div class="snow"></div>
+
+<!-- FOOTER -->
+<div class="muerdago muerdago-bottom"></div>
+
+
+<!-- ===== SCRIPT TEXTO CIRCULAR ===== -->
+<script>
+const contenedor = document.getElementById("texto");
+const textoBase = " • FELIZ NAVIDAD";
+let angulo = 0;
+
+while (angulo < 360) {
+    textoBase.split("").forEach(letra => {
+        const span = document.createElement("span");
+        span.textContent = letra;
+
+        const espacio = letra === "•" ? 4 : 12;
+
+        span.style.transform = `rotate(${angulo}deg)`;
+        contenedor.appendChild(span);
+
+        angulo += espacio;
+    });
+}
+</script>
+
+</body>
+</html>
