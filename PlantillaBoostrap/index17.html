@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        
+
+        .row{
+            background: rgb(228, 126, 9);
+            margin-top: 20px;
+        }
+        
+        .contenido{
+            background: beige;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid rgb(49, 1, 49);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="row">
+            <div class="contenido col order-4 order-md-1">Columna #1</div>
+            <div class="contenido col order-3 order-md-2">Columna #2</div>
+            <div class="contenido col order-2 order-md-3">Columna #3</div>
+            <div class="contenido col order-1 order-md-4">Columna #4</div>
+        </div>
+
+         <div class="row">
+            <div class="contenido col-3 offset-3 offset-sm-6">Columna #1</div>
+        </div>
+
+        <div class="row">
+            <div class="contenido col-3 offset-3">Columna #1</div>
+            <div class="contenido col-3 offset-3">Columna #1</div>
+        </div>
+
+        <div class="row">
+            <div class="contenido col-auto">Carol</div>
+            <div class="contenido col-auto">Carolina Ruescas</div>
+        </div>
+        
+    </div>
+</body>
+</html>
