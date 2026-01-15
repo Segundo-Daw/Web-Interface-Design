@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacer menu de navegación</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background: rgb(126, 173, 173);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">   
+            <div class="col-12 mt-4">
+                <a href="#" class="btn btn-primary">Boton a enlace</a>
+                <button class="btn btn-primary" type="button" >Boton</button>
+                <input type="button" class="btn btn-primary" value="Boton input">
+                <input type="submit" class="btn btn-primary" value="Boton Submit"> 
+            </div>
+            <div class="col-12">
+                <hr class="mt-4">
+                <button class="btn btn-lg btn-primary" type="button" >Boton Grande</button>
+                <button class="btn btn-lg btn-secondary" type="button" >Boton Secundario Grande</button>
+                <button class="btn btn-sm btn-primary" type="button" >Boton pequeño</button>
+                <button class="btn btn-sm btn-secondary" type="button" >Boton secundario pequeño</button>
+            </div>
+            <div class="col-12">
+                <hr class="mt-4">
+                <!-- En este caso usamos display con grap de 2 (espaciado) en 6 columnas al no poner una fila antes no es responsive porque toma un tamaño fijo -->
+                 <div class="d-grid gap-2 col-6">
+                    <button class="btn btn-primary" type="button" >Boton Primario</button>
+                    <button class="btn btn-secondary" type="button" >Boton Secundario </button>
+                 </div>
+            </div>
+            <div class="col-12">
+                <hr class="mt-4">
+                <!-- Aqui en flex podemos justificar, center, end, etc -->
+                <div class="d-flex gap-2 justify-content-between">
+                    <button class="btn btn-primary" type="button" >Boton Primario</button>
+                    <button class="btn btn-secondary" type="button" >Boton Secundario </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
