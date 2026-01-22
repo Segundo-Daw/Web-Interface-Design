@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Formularios (3ºevaluación) </title>
+    <style>
+        body{
+            background: rgb(255, 255, 255);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <!--Grupo de lista-->
+                <ul class="list-group">
+                    <li class="list-group-item">Elemento #1</li>
+                    <li class="list-group-item active">Elemento #2</li>
+                    <li class="list-group-item disabled">Elemento #3</li>
+                    <li class="list-group-item">Elemento #4</li>
+                    <li class="list-group-item">Elemento #5</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <!--Lista con enlaces-->
+                <ul class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Elemento #1</a>
+                    <a href="#" class="list-group-item list-group-item-action active">Elemento #2</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled">Elemento #3</a>
+                    <a href="#" class="list-group-item list-group-item-action">Elemento #4</a>
+                    <a href="#" class="list-group-item list-group-item-action">Elemento #5</a>
+                </ul>
+            </div>
+
+            <div class="col">
+                <!--Quitar los bordes a la lista-->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Elemento #1</li>
+                    <li class="list-group-item active">Elemento #2</li>
+                    <li class="list-group-item disabled">Elemento #3</li>
+                    <li class="list-group-item">Elemento #4</li>
+                    <li class="list-group-item">Elemento #5</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <!--Para poder poner enumeración a la lista-->
+                <ul class="list-group list-group-numbered">
+                    <li class="list-group-item">Elemento #1</li>
+                    <li class="list-group-item active">Elemento #2</li>
+                    <li class="list-group-item disabled">Elemento #3</li>
+                    <li class="list-group-item">Elemento #4</li>
+                    <li class="list-group-item">Elemento #5</li>
+                </ul>
+            </div>
+		</div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <!--List gruop per  con diferentes colores-->
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">Elemento #1</li>
+                    <li class="list-group-item list-group-item-secondary">Elemento #2</li>
+                    <li class="list-group-item list-group-item-success">Elemento #3</li>
+                    <li class="list-group-item list-group-item-danger">Elemento #4</li>
+                </ul>
+                <!--List gruop per  con diferentes colores con enlaces-->
+                <ul class="list-group list-group-numbered">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-warning ">Enlace #1</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info ">Enlace #2</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light ">Enlace #3</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark ">Enlace #4</a>
+                </ul>
+            </div>
+
+            <div class="col">
+                <!--List gorup con Badges y Checkbox-->
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Elemento #1 <span class="badge bg-primary">Badge</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Elemento #2 <span class="badge bg-primary">Badge</span>
+                    </li>
+
+                    <!--Para hacer checkbox en la misma columna-->
+                    <label class="list-group-item">
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="form-check-input me-1">Checkbox 1
+                    </label>
+                    <label class="list-group-item">
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="form-check-input me-1">Checkbox 2
+                    </label>
+                </ul>
+            </div>
+
+            <div class="col">
+                <!--Lista personalizada para que tenga un titulo, cuerpo e input-->
+                <ul class="list-group">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5>Título de mi artículo</h5>
+                                <small>hace 1 día</small>
+                            </div>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ut maxime</p>
+                            <small class="text-muted">Ver más</small>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5>Título de mi artículo</h5>
+                                <small>hace 1 día</small>
+                            </div>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ut maxime</p>
+                            <small class="text-muted">Ver más</small>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5>Título de mi artículo</h5>
+                                <small>hace 1 día</small>
+                            </div>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ut maxime</p>
+                            <small class="text-muted">Ver más</small>
+                        </a>
+
+                    </div>
+
+                </ul>
+
+            </div>
+
+            
+
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

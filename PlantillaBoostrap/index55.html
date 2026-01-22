@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Formularios (3ºevaluación)</title>
+    <style>
+        body{
+            background: lightgoldenrodyellow;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <!--Checkbox-->
+                <div class="col-6">
+					<label for="rango" class="form-label">Precio</label>
+					<input type="range" class="form-range" id="rango" min="0" max="1000" step="250"> <!--el step te dice que va de 250 en 250-->
+					<div class="d-flex justify-content-between">
+						<p class="form-text">0 €</p>
+						<p class="form-text">1000 €</p>
+					</div>
+                </div>
+
+				<div class="col-6">
+					<label for="disable-rango" class="form-label">Valor</label>
+					<input type="range" class="form-range" id="disable-rango" disabled>
+					<div class="d-flex justify-content-between">
+						<p class="form-text">0 €</p>
+						<p class="form-text">1000 €</p>
+					</div>
+                </div>
+		</div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
