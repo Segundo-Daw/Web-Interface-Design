@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tooltip</title>
+    <style>
+        body{
+            background: rgb(175, 152, 156);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col">
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Tolltip Arriba gghhh"
+                >
+                    Tooltip Arriba
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="Tolltip Arriba gghhh"
+                >
+                    Tooltip Abajo
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Tolltip Arriba gghhh"
+                >
+                    Tooltip Izquierda
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="right"
+                    title="Tolltip Arriba gghhh"
+                >
+                    Tooltip Derecha
+                </button>
+
+                
+            </div>
+            
+            
+        </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script >
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>
