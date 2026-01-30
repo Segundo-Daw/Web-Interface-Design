@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Flexboxs en Bootstrap</title>
+    <style>
+        
+        body{
+            background: rgb(253, 251, 230);
+        }
+        .caja{
+            max-height: 100px;
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col d-flex">
+                <div class="caja border border-dark border-3 p-2 overflow-auto">
+                    <h3>.overflow-auto</h3>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo, eligendi eveniet autem, minima dolor dicta assumenda laborum, doloremque facere tempore nobis odit beatae similique illo quaerat optio qui neque.
+                </div>
+
+                <div class="caja border border-dark border-3 p-2 overflow-hidden">
+                    <h3>.overflow-hideen</h3>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo, eligendi eveniet autem, minima dolor dicta assumenda laborum, doloremque facere tempore nobis odit beatae similique illo quaerat optio qui neque.
+                </div>
+
+                <div class="caja border border-dark border-3 p-2 overflow-visible">
+                    <h3>.overflow-visible</h3>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo, eligendi eveniet autem, minima dolor dicta assumenda laborum, doloremque facere tempore nobis odit beatae similique illo quaerat optio qui neque.
+                </div>
+
+                <div class="caja border border-dark border-3 p-2 overflow-scroll">
+                    <h3>.overflow-scroll</h3>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo, eligendi eveniet autem, minima dolor dicta assumenda laborum, doloremque facere tempore nobis odit beatae similique illo quaerat optio qui neque.
+                </div> 
+            </div>
+        </div>    
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
